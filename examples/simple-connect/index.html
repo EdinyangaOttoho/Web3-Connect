@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=1,initial-scale=1.0,width=device-width"/>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"/>
+        <title>Web3-Connect | Simple Connect Example</title>
+        <link rel="stylesheet" href="./css/main.css"/>
+    </head>
+    <body style="background-color:#000000;padding-bottom:10px;overflow-x:hidden!important">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark text-white" style="z-index:200">
+            <div class="container">
+                <a class="navbar-brand me-5" href="#">
+                    <h2>LOGO</h2>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse p-3" id="navbar">
+
+                    <div id="connect-pane">
+                        <button class="btn btn-primary" id="connect">Connect wallet</button>
+                    </div>
+
+                    <div id="disconnect-pane">
+                        <button class="btn btn-secondary" id="disconnect"></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+        
+        <section class="my-5" id="content" style="color:white;margin-top:80px!important;text-align:center;">
+            
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.min.js"></script>
+        <script src="../../src/connect.js"></script>
+        <script src="./js/initialize.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
