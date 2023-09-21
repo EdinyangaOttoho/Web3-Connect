@@ -1,7 +1,3 @@
-const _ = (elem)=> {
-    return document.getElementById(elem);
-}
-
 var connected = false;
 
 const formatWallet = (address) => {
@@ -15,15 +11,15 @@ const formatWallet = (address) => {
 
 if (web3Account.isConnected == true) {
     connected = true;
-    _("connect-pane").style.display = "inline-block";
-    _("disconnect").onclick = ()=> {
+    document.getElementById("connect-pane").style.display = "inline-block";
+    document.getElementById("disconnect").onclick = ()=> {
         web3modal.openModal();
     };
 }
 else {
     connected = false;
-    _("connect-pane").style.display = "inline-block";
-    _("connect").onclick = ()=> {
+    document.getElementById("connect-pane").style.display = "inline-block";
+    document.getElementById("connect").onclick = ()=> {
         web3modal.openModal();
     };
 }
@@ -31,23 +27,23 @@ else {
 const listen = ()=> {
     web3Account = getAccount();
     if (web3Account.isConnected) {
-        _("connect-pane").style.display = "none";
-        _("disconnect-pane").style.display = "inline-block";
-        _("disconnect").innerHTML = formatWallet(web3Account.address);
-        _("connect").onclick = ()=> {
+        document.getElementById("connect-pane").style.display = "none";
+        document.getElementById("disconnect-pane").style.display = "inline-block";
+        document.getElementById("disconnect").innerHTML = formatWallet(web3Account.address);
+        document.getElementById("connect").onclick = ()=> {
             web3modal.openModal();
         };
-        _("content").innerHTML = `Connected To: ${web3Account.address}`;
+        document.getElementById("content").innerHTML = `Connected To: ${web3Account.address}`;
         connected = true;
     }
     else {
-        _("connect-pane").style.display = "inline-block";
-        _("disconnect-pane").style.display = "none";
-        _("disconnect").onclick = ()=> {
+        document.getElementById("connect-pane").style.display = "inline-block";
+        document.getElementById("disconnect-pane").style.display = "none";
+        document.getElementById("disconnect").onclick = ()=> {
             web3modal.openModal();
         };
         connected = false;
-        _("content").innerHTML = ``;
+        document.getElementById("content").innerHTML = ``;
     }
 }
 
