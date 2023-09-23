@@ -3,9 +3,13 @@ const writeWeb3Contract = async (address, functionName, abi, args=[], value=null
         address: address,
         abi: abi,
         functionName: functionName,
-        args:args,
-        value: parseEther(value.toString())
+        args:args
     })
+
+    if (value !== null) {
+        config.value = parseEther(value.toString());
+    }
+
     const { hash } = await writeContract(config)
     return hash;
 }
